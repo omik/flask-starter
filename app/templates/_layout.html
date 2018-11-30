@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+    crossorigin="anonymous">
+  <!-- Bulma 0.7.2 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
+  <!-- Own Madness -->
+  <script src="{{ url_for('static', filename='js/magic.js') }}"></script>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/mods.css') }}">
+  <title>Flask starter template</title>
+</head>
+
+<body>
+  <section class="hero is-link is-fullheight is-bold">
+    <div class="hero-head">
+      {% block header %}{% endblock %}
+    </div>
+
+    <div class="hero-body">
+      <div class="container has-text-centered">
+
+        {% block content %}{% endblock %}
+
+      </div>
+    </div>
+
+    <div class="hero-foot">
+      <div class="content is-mobile has-text-centered">
+        <p>
+          Simple app starting point by <a href="https://omik.github.io" target="_blank"><strong>Jesús Muñoz a.k.a. "omiK"</strong></a>.
+            <br> Proudly using Flask, Flask-SQLAlchemy, JWT and Bulma CSS. Feel free to use/remix/destroy
+        </p>
+      </div>
+
+    </div>
+  </section>
+</body>
+
+</html>
